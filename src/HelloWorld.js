@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './HelloWorld.css';
 
-// const HelloWorld = (props) => {
-//   return (<div className="HelloWorld">Hello {props.name}!</div>);
-// }
-
 class HelloWorld extends Component { //KJL: is using class in React normal? or is this just something this tutorial author is doing? the couple of people I've talked to about `class` said to avoid it...
   constructor(props) {
     super(props); // KJL: what is the super, here? is it different with React-magic, or is it the normal super?
@@ -13,7 +9,9 @@ class HelloWorld extends Component { //KJL: is using class in React normal? or i
   }
 
   frenchify() {
-    this.setState({greeting: "Bonjour"}); // KJL: when this doesn't work, how do I debug to find where the `this` is?
+    // KJL: the tutorial had me add the following line before I added the frenchify.bind call above. As you'd imagine, this didn't work until I did that.
+    // Question is: when this didn't work, how could I've debugged to find where the `this` is? I could only set a breakpoint in this function, is there anywhere useful up the callstack I could place a breakpoint to see the calling context?
+    this.setState({greeting: "Bonjour"});
   }
 
   render() {
