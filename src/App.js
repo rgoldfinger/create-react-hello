@@ -3,9 +3,9 @@ import HelloWorld from './HelloWorld';
 
 const App = () => {
   return (
-    <div className="HelloWorld">
-      <HelloWorld/>
-      <HelloWorld/>
+    <div className="App">
+      <HelloWorld name="Jim"/>
+      <HelloWorld name="Sally"/>
     </div>
   );
 };
