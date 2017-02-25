@@ -5,9 +5,9 @@ import './HelloWorld.css';
 //   return (<div className="HelloWorld">Hello {props.name}!</div>);
 // }
 
-class HelloWorld extends Component {
+class HelloWorld extends Component { //KJL: is using class in React normal? or is this just something this tutorial author is doing? the couple of people I've talked to about `class` said to avoid it...
   constructor(props) {
-    super(props); // KJL: what is the super, here? ...like, I know what "super" generally refers to, just what's the super of HelloWorld?
+    super(props); // KJL: what is the super, here? is it different with React-magic, or is it the normal super?
     this.state = { greeting: 'Hello' };
     this.frenchify = this.frenchify.bind(this);
   }
